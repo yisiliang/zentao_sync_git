@@ -9,6 +9,6 @@ zentao自带的同步工具需要是两个Job，一个不停的pull下来，另�
 ## 步骤：
 1. 在版本库中创建并修改hooks/post-receive，这个脚本中调用git_to_zentao.php；
 2. git_to_zentao.php中将repoRoot、fromRevision和endRevision保存到文件中，并scp到zentao服务器；
-3. 修改zentao中module/git/model.php的run函数，修改成从文件中获取repoRoot、fromRevision和endRevision；
-4. 修改git命令实现，ssh到git服务器中执行git命令。
+3. 修改zentao中[***module/git/model.php***](https://github.com/yisiliang/zentaopms/blob/master/module/git/model.php)的run函数，修改成从文件中获取repoRoot、fromRevision和endRevision；
+4. 修改zentao中[***module/git/model.php***](https://github.com/yisiliang/zentaopms/blob/master/module/git/model.php)的git命令实现，使用ssh到git服务器中执行git命令。
 
